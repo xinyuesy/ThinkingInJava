@@ -30,5 +30,7 @@ public class Enumerators2
 		PrintData.print(v.elements());
 		System.out.println("Hashtable");
 		PrintData.print(h.elements());
+		
+		//System.out.println("test");
 	}
 }
