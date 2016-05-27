@@ -79,6 +79,8 @@ public class Lunch
 			//System.out.println(s3.test);
 		}
 		
+		PackagedClass pc = new PackagedClass();
+		
 		
 	}
 
