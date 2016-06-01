@@ -1,6 +1,8 @@
 package testpackage;
 import access.PackagedClass;
-
+import chapter07.Orc;
+//import chapter07.Orc;
+//类只有public访问权限和package访问权限
 public class Test {
 	
 	private static Mouse[] test = new Mouse[10];
@@ -17,6 +19,9 @@ public class Test {
 		
 		for(int i = 0; i < 10; i++)
 			System.out.println(number[i]);
+		
+		Orc o = new Orc("Sam",25);
+		
 		
 		
 	}
