@@ -25,6 +25,8 @@ class Unicycle extends Cycle
 	{
 		return 1;
 	}
+	
+	
 }
 
 class Bicycle extends Cycle
@@ -38,6 +40,10 @@ class Bicycle extends Cycle
 	{
 		return 2;
 	}
+	void balance()
+	{
+		System.out.println("Bicycle.balance()");
+	}
 }
 
 class Tricycle extends Cycle
@@ -50,6 +56,10 @@ class Tricycle extends Cycle
 	public int wheels()
 	{
 		return 3;
+	}
+	void balance()
+	{
+		System.out.println("Unicycle.balance()");
 	}
 }
 public class CycleTest
@@ -66,5 +76,12 @@ public class CycleTest
 		riding(bc);
 		Tricycle tc = new Tricycle();
 		riding(tc);
+		
+		Cycle a = new Unicycle();
+		//((Bicycle) a).balance();
+		a = new Bicycle();
+		((Bicycle) a).balance();
+		a = new Tricycle();
+		((Tricycle) a).balance();
 	}
 }
