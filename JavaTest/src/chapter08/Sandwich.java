@@ -1,6 +1,9 @@
 package chapter08;
 
-
+interface FastFood
+{
+	int energy();
+}
 class Meal
 {
 	Meal() { System.out.println("Meal()"); }
@@ -35,7 +38,7 @@ class PortableLunch extends Lunch
 {
 	PortableLunch() { System.out.println("PortableLunch()"); }
 }
-public class Sandwich extends PortableLunch 
+public class Sandwich extends PortableLunch implements FastFood
 {
 	private Bread b = new Bread();
 	private Cheese c = new Cheese();
@@ -44,6 +47,11 @@ public class Sandwich extends PortableLunch
 	public Sandwich() { System.out.println("Sandwich()"); }
 	public static void main(String[] args)
 	{
-		new Sandwich();
+		Sandwich s = new Sandwich();
+		System.out.println(s.energy());
+	}
+	public int energy() {
+		
+		return 1530;
 	}
 }
