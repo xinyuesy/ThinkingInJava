@@ -1,7 +1,7 @@
 package interfaces.interfaceprocessor;
 
 public class Apply {
-	public static void process(Process p, Object s)
+	public static void process(Processor p, Object s)
 
 	{
 		System.out.println("Using Processor " + p.name());

@@ -1,9 +1,8 @@
 package interfaces.filters;
 
-public class LowPass extends Filter
-{
+public class HighPass extends Filter {
 	double cutoff;
-
-	public LowPass(double cutoff) { this.cutoff = cutoff; }
+	public HighPass(double cutoff) { this.cutoff = cutoff; }
 	public Waveform process(Waveform input) { return input; }
+
 }
