@@ -1,5 +1,7 @@
 package interfaces.nesting;
 
+import interfaces.nesting.A.DImp2;
+
 class A
 {
 	interface B
@@ -91,8 +93,11 @@ public class NestingInterfaces
 	public static void main(String[] args)
 	{
 		A a = new A();
-		A.BImp ab = new A.BImp();
-		A.CImp ac = new A.CImp();
+		//A.BImp ab = new A.BImp();
+		//A.CImp ac = new A.CImp();
+		A a2 = new A();
+		a2.receiveD(a.getD());
+		//A.DImp2 ad = (DImp2) a.getD();
 		
 		
 	}
