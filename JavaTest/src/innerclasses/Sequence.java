@@ -7,6 +7,13 @@ interface Selector
 	void next();
 	Sequence sequenceRef();
 }
+interface ReverseSelector
+{
+	boolean start();
+	Object current();
+	void previous();
+	Sequence sequenceRef();
+}
 class MyString
 {
 	String name= "MyString";
@@ -36,12 +43,28 @@ public class Sequence
 		public String toString() { return address; }
 		public Sequence sequenceRef() { return Sequence.this; }
 	}
+	private class ReverseSequenceSelector implements ReverseSelector
+	{
+
+		private int i = items.length;
+		public boolean start() { return i == 0; }
+		public Object current() { return items[i-1]; }
+		public Sequence sequenceRef() { return Sequence.this; }
+		public void previous() { if(i > 0 ) i--; }
+		public String toString() { return "ReverseSequenceSelector"; }
+
+		
+		
+	}
 	public void print() { System.out.println("Sequence"); }
 	public Selector selector()
 	{
 		return new SequenceSelector();
 	}
-	
+	public ReverseSelector reverseSelector()
+	{
+		return new ReverseSequenceSelector();
+	}
 	public static void main(String[] args)
 	{
 		Sequence sequence = new Sequence(10);
@@ -63,6 +86,12 @@ public class Sequence
 		{
 			System.out.println(selector.current() + " " + selector.toString());
 			selector.next();
+		}
+		ReverseSelector reverseSelector = sequence.reverseSelector();
+		while(!reverseSelector.start())
+		{
+			System.out.println(reverseSelector.current() + " " + reverseSelector.toString());
+			reverseSelector.previous();
 		}
 		
 		

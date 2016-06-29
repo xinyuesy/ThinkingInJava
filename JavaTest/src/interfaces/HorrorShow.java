@@ -45,7 +45,31 @@ public class HorrorShow
 		DangerousMonster barney = new DragonZilla();
 		u(barney);
 		v(barney);
-		Vampire vlad = new VeryBadVampire();
+		//Vampire vlad = new VeryBadVampire();
+		Vampire vlad = new Vampire()
+				{
+
+					public void destroy() {
+						// TODO Auto-generated method stub
+						
+					}
+
+					public void menace() {
+						System.out.println("Anonymous Vampire ");
+						
+					}
+
+					public void kill() {
+						// TODO Auto-generated method stub
+						
+					}
+
+					public void drinkBlood() {
+						// TODO Auto-generated method stub
+						
+					}
+					
+				};
 		u(vlad);
 		v(vlad);
 		w(vlad);
