@@ -1,5 +1,8 @@
 package innerclasses;
 
+import java.util.ArrayList;
+import java.util.Iterator;
+
 interface Selector 
 {
 	boolean end();
@@ -24,31 +27,31 @@ class MyString
 }
 public class Sequence 
 {
-	private Object[] items;
+	//private Object[] items;
+	private ArrayList<Object> items;
 	private int next = 0;
 	private String address = "Beijing";
-	public Sequence(int size) { items = new Object[size]; }
+	public Sequence(int size) { items = new ArrayList<Object>(); }
 	public void add(Object x)
 	{
-		if(next < items.length)
-			items[next++] = x;
+		items.add(x);
 	}
 	
 	private class SequenceSelector implements Selector
 	{
 		private int i = 0;
-		public boolean end() { return i == items.length; }
-		public Object current() { return items[i]; }
-		public void next() { if(i < items.length) i++; }
+		public boolean end() { return i == items.size(); }
+		public Object current() { return items.get(i); }
+		public void next() { if(i < items.size()) i++; }
 		public String toString() { return address; }
 		public Sequence sequenceRef() { return Sequence.this; }
 	}
 	private class ReverseSequenceSelector implements ReverseSelector
 	{
 
-		private int i = items.length;
+		private int i = items.size();
 		public boolean start() { return i == 0; }
-		public Object current() { return items[i-1]; }
+		public Object current() { return items.get(i-1); }
 		public Sequence sequenceRef() { return Sequence.this; }
 		public void previous() { if(i > 0 ) i--; }
 		public String toString() { return "ReverseSequenceSelector"; }
@@ -93,7 +96,7 @@ public class Sequence
 			System.out.println(reverseSelector.current() + " " + reverseSelector.toString());
 			reverseSelector.previous();
 		}
-		
+
 		
 	}
 }
