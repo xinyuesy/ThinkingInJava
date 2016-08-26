@@ -1,6 +1,5 @@
 package exceptions;
 
-
 class VeryImportantException extends Exception
 {
 	public String toString()
@@ -25,21 +24,23 @@ class RainException extends Exception
 	}
 }
 
-
-public class LostMessage 
+public class LostMessage
 {
 	void f() throws VeryImportantException
 	{
 		throw new VeryImportantException();
 	}
+
 	void dispose() throws HoHumException
 	{
 		throw new HoHumException();
 	}
+
 	void rain() throws RainException
 	{
 		throw new RainException();
 	}
+
 	public static void main(String[] args)
 	{
 		try
@@ -47,7 +48,7 @@ public class LostMessage
 			LostMessage lm = new LostMessage();
 			try
 			{
-				
+
 				try
 				{
 					lm.f();
@@ -61,8 +62,7 @@ public class LostMessage
 				lm.rain();
 				return;
 			}
-		}
-		catch(Exception e)
+		} catch (Exception e)
 		{
 			System.out.println(e);
 		}

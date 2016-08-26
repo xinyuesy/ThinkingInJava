@@ -1,6 +1,7 @@
 package interfaces.interfaceprocessor;
 
-public class Apply {
+public class Apply
+{
 	public static void process(Processor p, Object s)
 
 	{

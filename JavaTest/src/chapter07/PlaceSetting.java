@@ -1,4 +1,5 @@
 package chapter07;
+
 //同时使用组合和继承
 class Plate
 {
@@ -33,6 +34,7 @@ class Spoon extends Utensil
 		System.out.println("Spoon constructor");
 	}
 }
+
 class Fork extends Utensil
 {
 	Fork(int i)
@@ -51,7 +53,6 @@ class Knife extends Utensil
 	}
 }
 
-
 class Custom
 {
 	Custom(int i)
@@ -59,21 +60,23 @@ class Custom
 		System.out.println("Custom constructor");
 	}
 }
-public class PlaceSetting  extends Custom
+
+public class PlaceSetting extends Custom
 {
 	private Spoon sp;
 	private Fork frk;
 	private Knife kn;
 	private DinnerPlate pl;
+
 	public PlaceSetting(int i)
 	{
-		super(i+1);
-		sp = new Spoon(i+1);
-		frk = new Fork(i+3);
-		kn = new Knife(i+4);
-		pl = new DinnerPlate(i+5);
+		super(i + 1);
+		sp = new Spoon(i + 1);
+		frk = new Fork(i + 3);
+		kn = new Knife(i + 4);
+		pl = new DinnerPlate(i + 5);
 	}
-	
+
 	public static void main(String[] args)
 	{
 		PlaceSetting x = new PlaceSetting(9);

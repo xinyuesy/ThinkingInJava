@@ -2,8 +2,7 @@ package interfaces;
 
 import java.util.Random;
 
-
-public class TestRandVals 
+public class TestRandVals
 {
 	public static void main(String[] args)
 	{
@@ -12,7 +11,7 @@ public class TestRandVals
 		System.out.println(RandVals.RANDOM_FLOAT);
 		System.out.println(RandVals.RANDOM_DOUBLE);
 		Random rand = new Random(47);
-		//System.out.println(rand.nextInt());
+		// System.out.println(rand.nextInt());
 		System.out.println(rand.nextDouble());
 	}
 }

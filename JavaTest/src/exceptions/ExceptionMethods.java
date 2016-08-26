@@ -1,13 +1,13 @@
 package exceptions;
 
-public class ExceptionMethods 
+public class ExceptionMethods
 {
 	public static void main(String[] args)
 	{
 		try
 		{
 			throw new Exception("My Exception");
-		} catch(Exception e)
+		} catch (Exception e)
 		{
 			System.out.println("Caught Exception");
 			System.out.println("getMessage():" + e.getMessage());

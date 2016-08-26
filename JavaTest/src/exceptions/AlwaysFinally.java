@@ -1,8 +1,10 @@
 package exceptions;
 
-class FourException extends Exception {}
+class FourException extends Exception
+{
+}
 
-public class AlwaysFinally 
+public class AlwaysFinally
 {
 	public static void main(String[] args)
 	{
@@ -17,7 +19,7 @@ public class AlwaysFinally
 			{
 				System.out.println("finally in 2nd try block");
 			}
-		} catch(FourException e)
+		} catch (FourException e)
 		{
 			System.out.println("Caught FourException in 1st try block");
 		} finally

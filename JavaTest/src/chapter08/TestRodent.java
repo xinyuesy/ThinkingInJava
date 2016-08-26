@@ -50,13 +50,10 @@ public class TestRodent {
 
 }*/
 
-
-
 interface Rodent
 {
 	void print();
 }
-
 
 class Mouse implements Rodent
 {
@@ -64,7 +61,11 @@ class Mouse implements Rodent
 	{
 		System.out.println("Mouse()");
 	}
-	public void print() { System.out.println("Mouse"); }
+
+	public void print()
+	{
+		System.out.println("Mouse");
+	}
 }
 
 class Gerbil implements Rodent
@@ -73,7 +74,11 @@ class Gerbil implements Rodent
 	{
 		System.out.println("Gerbil()");
 	}
-	public void print() { System.out.println("Gerbil"); }
+
+	public void print()
+	{
+		System.out.println("Gerbil");
+	}
 }
 
 class Hamaster implements Rodent
@@ -82,17 +87,20 @@ class Hamaster implements Rodent
 	{
 		System.out.println("Hamaster()");
 	}
-	public void print() { System.out.println("Hamaster"); }
+
+	public void print()
+	{
+		System.out.println("Hamaster");
+	}
 }
-public class TestRodent {
+
+public class TestRodent
+{
 	public static void main(String[] args)
 	{
-		Rodent[] r = {
-				new Mouse(),
-				new Gerbil(),
-				new Hamaster()
-		};
-		for(int i = 0; i < r.length; i++)
+		Rodent[] r =
+		{ new Mouse(), new Gerbil(), new Hamaster() };
+		for (int i = 0; i < r.length; i++)
 			r[i].print();
 	}
 

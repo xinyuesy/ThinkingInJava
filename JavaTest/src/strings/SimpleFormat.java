@@ -1,6 +1,6 @@
 package strings;
 
-public class SimpleFormat 
+public class SimpleFormat
 {
 	public static void main(String[] args)
 	{

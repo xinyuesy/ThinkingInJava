@@ -2,8 +2,10 @@ package debugoffpackage;
 
 import chapter06.Cookie;
 
-public class ChocolateChip extends Cookie{
-	ChocolateChip() {
+public class ChocolateChip extends Cookie
+{
+	ChocolateChip()
+	{
 		super();
 		// TODO Auto-generated constructor stub
 	}
@@ -14,7 +16,7 @@ public class ChocolateChip extends Cookie{
 		c.makeCookie();
 		c.testProtected();
 		c.testPublic();
-		//c.testPackage();
+		// c.testPackage();
 	}
 
 }

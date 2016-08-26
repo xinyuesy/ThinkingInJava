@@ -6,8 +6,8 @@ import java.util.logging.Logger;
 
 class LoggingException extends Exception
 {
-	private static Logger logger = 
-			Logger.getLogger("LoggingException");
+	private static Logger logger = Logger.getLogger("LoggingException");
+
 	public LoggingException()
 	{
 		StringWriter trace = new StringWriter();
@@ -16,21 +16,21 @@ class LoggingException extends Exception
 	}
 }
 
-public class LoggingExceptions 
+public class LoggingExceptions
 {
 	public static void main(String[] args)
 	{
 		try
 		{
 			throw new LoggingException();
-		}catch(LoggingException e)
+		} catch (LoggingException e)
 		{
 			System.err.println("Caught " + e);
 		}
 		try
 		{
 			throw new LoggingException();
-		}catch(LoggingException e)
+		} catch (LoggingException e)
 		{
 			System.err.println("Caught " + e);
 		}

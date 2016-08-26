@@ -7,7 +7,7 @@ import java.util.LinkedHashSet;
 import java.util.LinkedList;
 import java.util.TreeSet;
 
-public class MoviesName 
+public class MoviesName
 {
 	static Collection fill(Collection<String> name)
 	{
@@ -19,7 +19,7 @@ public class MoviesName
 		name.add("Furious");
 		return name;
 	}
-	
+
 	public static void main(String[] args)
 	{
 		System.out.println(fill(new ArrayList<String>()));

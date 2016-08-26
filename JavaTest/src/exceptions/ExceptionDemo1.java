@@ -8,20 +8,20 @@ class Vegetable
 	}
 }
 
-public class ExceptionDemo1 
+public class ExceptionDemo1
 {
 	public static void main(String[] args)
 	{
 		Vegetable v = new Vegetable();
 		Vegetable v1 = null;
-		//v1.print();
+		// v1.print();
 		try
 		{
 			v1.print();
-		}catch(NullPointerException e)
+		} catch (NullPointerException e)
 		{
 			e.printStackTrace(System.out);
 		}
-		
+
 	}
 }

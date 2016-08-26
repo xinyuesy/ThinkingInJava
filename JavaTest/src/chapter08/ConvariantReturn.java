@@ -1,26 +1,39 @@
 package chapter08;
 
-
 class Grain
 {
-	public String toString() { return "Grain"; }
+	public String toString()
+	{
+		return "Grain";
+	}
 }
 
 class Wheat extends Grain
 {
-	public String toString() { return "Wheat"; }
+	public String toString()
+	{
+		return "Wheat";
+	}
 }
 
 class Mill
 {
-	Grain process() { return new Grain(); }
+	Grain process()
+	{
+		return new Grain();
+	}
 }
 
 class WheatMill extends Mill
 {
-	Wheat process() { return new Wheat(); }
+	Wheat process()
+	{
+		return new Wheat();
+	}
 }
-public class ConvariantReturn {
+
+public class ConvariantReturn
+{
 	public static void main(String[] args)
 	{
 		Mill m = new Mill();

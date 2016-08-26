@@ -1,5 +1,6 @@
 package innerclasses;
 
-public interface Contents {
+public interface Contents
+{
 	int value();
 }

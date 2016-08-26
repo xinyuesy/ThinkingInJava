@@ -8,9 +8,11 @@ public abstract class StringProcessor implements Processor
 	{
 		return getClass().getSimpleName();
 	}
+
 	public abstract String process(Object input);
-	public static String s = 
-			"If she weighs the same as a duck, she's made of wood";
+
+	public static String s = "If she weighs the same as a duck, she's made of wood";
+
 	public static void main(String[] args)
 	{
 		Apply.process(new Upcase(), s);
@@ -23,7 +25,7 @@ class Upcase extends StringProcessor
 {
 	public String process(Object input)
 	{
-		return ((String)input).toUpperCase();
+		return ((String) input).toUpperCase();
 	}
 }
 
@@ -31,13 +33,14 @@ class Downcase extends StringProcessor
 {
 	public String process(Object input)
 	{
-		return ((String)input).toLowerCase();
+		return ((String) input).toLowerCase();
 	}
 }
+
 class Splitter extends StringProcessor
 {
 	public String process(Object input)
 	{
-		return Arrays.toString(((String)input).split(" "));
+		return Arrays.toString(((String) input).split(" "));
 	}
 }

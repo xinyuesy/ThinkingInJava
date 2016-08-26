@@ -2,24 +2,42 @@ package chapter08;
 
 class AlertStatus
 {
-	void print() { System.out.println("AlertStatus"); }
+	void print()
+	{
+		System.out.println("AlertStatus");
+	}
 }
+
 class Error extends AlertStatus
 {
-	void print() { System.out.println("Error"); }
+	void print()
+	{
+		System.out.println("Error");
+	}
 }
+
 class Warning extends AlertStatus
 {
-	void print() { System.out.println("Warning"); }
+	void print()
+	{
+		System.out.println("Warning");
+	}
 }
 
 class Info extends AlertStatus
 {
-	void print() { System.out.println("Info"); }
-	void notice() { System.out.println("Info notice"); }
+	void print()
+	{
+		System.out.println("Info");
+	}
+
+	void notice()
+	{
+		System.out.println("Info notice");
+	}
 }
 
-public class Starship  
+public class Starship
 {
 	public static void main(String[] args)
 	{
@@ -29,6 +47,6 @@ public class Starship
 		a.print();
 		a = new Info();
 		a.print();
-		//a.notice();
+		// a.notice();
 	}
 }

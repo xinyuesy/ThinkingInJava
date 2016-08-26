@@ -1,27 +1,45 @@
 package chapter08;
 
-
 class Actor
 {
-	public void act() {}
+	public void act()
+	{
+	}
 }
 
 class HappyActor extends Actor
 {
-	public void act() { System.out.println("HappyActor"); }
+	public void act()
+	{
+		System.out.println("HappyActor");
+	}
 }
 
 class SadActor extends Actor
 {
-	public void act() { System.out.println("SadActor"); };
+	public void act()
+	{
+		System.out.println("SadActor");
+	};
 }
+
 class Stage
 {
 	private Actor actor = new HappyActor();
-	public void change() { actor = new SadActor(); }
-	public void performPlay() { actor.act(); };
+
+	public void change()
+	{
+		actor = new SadActor();
+	}
+
+	public void performPlay()
+	{
+		actor.act();
+	};
 }
-public class Transmogrify {
+
+public class Transmogrify
+{
 	public static void main(String[] args)
 	{
 		Stage stage = new Stage();

@@ -2,13 +2,20 @@ package innerclasses;
 
 class MNA
 {
-	private void f() {}
+	private void f()
+	{
+	}
+
 	class A
 	{
-		private void g() {}
+		private void g()
+		{
+		}
+
 		public class B
 		{
-			void h() {
+			void h()
+			{
 				g();
 				f();
 			}
@@ -16,7 +23,7 @@ class MNA
 	}
 }
 
-public class MultiNestingAccess 
+public class MultiNestingAccess
 {
 	public static void main(String[] args)
 	{

@@ -1,7 +1,9 @@
 package testpackage;
+
 import static testpackage.Print.*;
 
-public class PrintTest {
+public class PrintTest
+{
 	public static void main(String[] args)
 	{
 		print("Available from now on!");

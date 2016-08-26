@@ -1,6 +1,5 @@
 package chapter07;
 
-
 class Homer
 {
 	char doh(char c)
@@ -8,11 +7,12 @@ class Homer
 		System.out.println("doh(char)");
 		return 'd';
 	}
-	
-	void doh(Milhouse m) {
+
+	void doh(Milhouse m)
+	{
 		// TODO Auto-generated method stub
 		System.out.println("Homer doh(Milhouse)");
-		
+
 	}
 
 	float doh(float f)
@@ -22,7 +22,9 @@ class Homer
 	}
 }
 
-class Milhouse{}
+class Milhouse
+{
+}
 
 class Bart extends Homer
 {
@@ -32,6 +34,7 @@ class Bart extends Homer
 		System.out.println("doh(Milhouse)");
 	}
 }
+
 public class Hide extends Bart
 {
 	public static void main(String[] args)
@@ -41,8 +44,8 @@ public class Hide extends Bart
 		b.doh('x');
 		b.doh(1.0f);
 		b.doh(new Milhouse());
-		//b.doh(m);
-		
+		// b.doh(m);
+
 		Hide h = new Hide();
 		h.doh(1);
 		h.doh(1.0f);

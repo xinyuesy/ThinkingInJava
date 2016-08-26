@@ -1,4 +1,5 @@
 package chapter08;
+
 //如果某个方法是静态的，它的行为就不具有多态性
 //静态方法是与类，而并非与单个的对象相关联的
 class StaticSuper
@@ -7,13 +8,12 @@ class StaticSuper
 	{
 		return "Base staticGet()";
 	}
-	
-	public String dynamicGet() 
+
+	public String dynamicGet()
 	{
 		return "Base dynamicGet()";
 	}
 }
-
 
 class StaticSub extends StaticSuper
 {
@@ -21,12 +21,15 @@ class StaticSub extends StaticSuper
 	{
 		return "Derived staticGet()";
 	}
+
 	public String dynamicGet()
 	{
 		return "Derived dynamicGet()";
 	}
 }
-public class StaticPolymorphism {
+
+public class StaticPolymorphism
+{
 	public static void main(String[] args)
 	{
 		StaticSuper sup = new StaticSub();

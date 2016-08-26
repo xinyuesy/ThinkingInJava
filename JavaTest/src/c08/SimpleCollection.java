@@ -1,16 +1,18 @@
 package c08;
+
 import java.util.*;
 
-public class SimpleCollection {
+public class SimpleCollection
+{
 	public static void main(String[] args)
 	{
 		Collection c = new ArrayList();
-		for(int i = 0; i < 10; i++)
+		for (int i = 0; i < 10; i++)
 		{
 			c.add(Integer.toString(i));
 		}
 		Iterator it = c.iterator();
-		while(it.hasNext())
+		while (it.hasNext())
 			System.out.println(it.next());
 	}
 }

@@ -1,7 +1,9 @@
 package interfaces.interfaceprocessor;
 
-public interface Processor {
+public interface Processor
+{
 	String name();
+
 	Object process(Object input);
 
 }

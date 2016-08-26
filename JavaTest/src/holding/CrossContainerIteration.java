@@ -1,4 +1,5 @@
 package holding;
+
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Iterator;
@@ -7,17 +8,18 @@ import java.util.TreeSet;
 
 import typeinfo.pets.*;
 
-public class CrossContainerIteration 
+public class CrossContainerIteration
 {
 	public static void display(Iterator<Pet> it)
 	{
-		while(it.hasNext())
+		while (it.hasNext())
 		{
 			Pet p = it.next();
 			System.out.print(p.id() + ":" + p + " ");
 		}
 		System.out.println();
 	}
+
 	public static void main(String[] args)
 	{
 		ArrayList<Pet> pets = Pets.arrayList(8);

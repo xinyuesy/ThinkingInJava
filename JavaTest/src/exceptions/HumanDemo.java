@@ -1,9 +1,18 @@
 package exceptions;
 
-class A extends Exception {}
-class B extends A {}
-class C extends B {}
-public class HumanDemo 
+class A extends Exception
+{
+}
+
+class B extends A
+{
+}
+
+class C extends B
+{
+}
+
+public class HumanDemo
 {
 	public static void main(String[] args)
 	{
@@ -11,13 +20,13 @@ public class HumanDemo
 		{
 			A c = new C();
 			throw c;
-		} catch(C c)
+		} catch (C c)
 		{
 			System.out.println("A exception");
-		} catch(B b)
+		} catch (B b)
 		{
 			System.out.println("B exception");
-		} catch(A a)
+		} catch (A a)
 		{
 			System.out.println("A exception");
 		}

@@ -9,16 +9,16 @@ import java.util.TreeSet;
 
 import net.mindview.util.TextFile;
 
-
-public class UniqueWords 
+public class UniqueWords
 {
 	public static void main(String[] args)
 	{
 		Set<String> words = new TreeSet<String>(String.CASE_INSENSITIVE_ORDER);
-		words.addAll(new TextFile("D:\\java\\document.txt","\\W+"));		
+		words.addAll(new TextFile("D:\\java\\document.txt", "\\W+"));
 		System.out.println(words);
-		//Set<Character> vowel = new TreeSet<Character>(Arrays.asList('a','e','i','o','u'));
-		Map<Character,Integer> vowel = new HashMap<Character,Integer>();
+		// Set<Character> vowel = new
+		// TreeSet<Character>(Arrays.asList('a','e','i','o','u'));
+		Map<Character, Integer> vowel = new HashMap<Character, Integer>();
 		vowel.put('a', 0);
 		vowel.put('e', 0);
 		vowel.put('i', 0);
@@ -30,16 +30,16 @@ public class UniqueWords
 		int total = 0;
 		int temp = 0;
 		String word;
-		while(it.hasNext())
+		while (it.hasNext())
 		{
 			count = 0;
 			word = it.next();
-			for(Character c : vowel.keySet())
+			for (Character c : vowel.keySet())
 			{
 				temp = vowel.get(c);
-				if(word.indexOf(c) != -1)
+				if (word.indexOf(c) != -1)
 				{
-					vowel.put(c,++temp);
+					vowel.put(c, ++temp);
 					count++;
 					total++;
 				}
@@ -48,6 +48,6 @@ public class UniqueWords
 		}
 		System.out.println("vowel: " + total);
 		System.out.println(vowel);
-		
+
 	}
 }

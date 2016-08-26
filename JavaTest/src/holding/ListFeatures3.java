@@ -10,35 +10,39 @@ import java.util.Random;
 class Flower implements Comparable<Flower>
 {
 	private String name;
+
 	Flower(String name)
 	{
 		this.name = name;
 	}
+
 	public String toString()
 	{
 		return name;
 	}
+
 	public String getString()
 	{
 		return name;
 	}
 
-	public int compareTo(Flower o) {
+	public int compareTo(Flower o)
+	{
 		// TODO Auto-generated method stub
 		return name.compareTo(o.getString());
 	}
 }
 
-
-public class ListFeatures3 
+public class ListFeatures3
 {
 	public static void main(String[] args)
 	{
 		Random rand = new Random(47);
-		List<Flower> flowers = new ArrayList<Flower>(Arrays.asList(new Flower("Rose"),new Flower("Tulip"),new Flower("Lotus")));
-	
+		List<Flower> flowers = new ArrayList<Flower>(
+				Arrays.asList(new Flower("Rose"), new Flower("Tulip"), new Flower("Lotus")));
+
 		System.out.println("1. " + flowers);
-		//Hamster h = new Hamster();
+		// Hamster h = new Hamster();
 		Flower f = new Flower("Sakura");
 		flowers.add(f);
 		System.out.println("2: " + flowers);
@@ -53,17 +57,17 @@ public class ListFeatures3
 		System.out.println("8: " + flowers);
 		flowers.add(1, new Flower("Wintersweet"));
 		System.out.println("9: " + flowers);
-		List<Flower> sub = flowers.subList(1,2);
+		List<Flower> sub = flowers.subList(1, 2);
 		System.out.println("sublist: " + sub);
 		System.out.println("10: " + flowers.containsAll(sub));
 		Collections.sort(sub);
 		System.out.println("sorted subList: " + sub);
 		System.out.println("11: " + flowers.containsAll(sub));
-		Collections.shuffle(sub,rand);
+		Collections.shuffle(sub, rand);
 		System.out.println("shuffled sublist: " + sub);
 		System.out.println("12: " + flowers.containsAll(sub));
 		List<Flower> copy = new ArrayList<Flower>(flowers);
-		sub = Arrays.asList(flowers.get(1),flowers.get(2));
+		sub = Arrays.asList(flowers.get(1), flowers.get(2));
 		System.out.println("sub: " + sub);
 		copy.retainAll(sub);
 		System.out.println("13: " + copy);
@@ -74,18 +78,17 @@ public class ListFeatures3
 		System.out.println("15: " + copy);
 		copy.set(0, new Flower("Rose"));
 		System.out.println("16: " + copy);
-		copy.addAll(0,sub);
+		copy.addAll(0, sub);
 		System.out.println("17: " + copy);
 		System.out.println("18: " + flowers.isEmpty());
 		flowers.clear();
 		System.out.println("19: " + flowers);
 		System.out.println("20: " + flowers.isEmpty());
-		flowers.addAll(Arrays.asList(new Flower("Rose"),new Flower("Lotus")));
+		flowers.addAll(Arrays.asList(new Flower("Rose"), new Flower("Lotus")));
 		System.out.println("21: " + flowers);
 		Object[] o = flowers.toArray();
 		System.out.println("22: " + o[1]);
-		//Pet[] pa = flowers.toArray(new Pet[0]);
-		//System.out.println("23: " + pa[3].id());
+		// Pet[] pa = flowers.toArray(new Pet[0]);
+		// System.out.println("23: " + pa[3].id());
 	}
 }
-

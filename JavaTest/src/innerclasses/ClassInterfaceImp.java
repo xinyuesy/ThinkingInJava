@@ -12,7 +12,7 @@ public class ClassInterfaceImp implements ClassInInterface
 
 	}
 
-	public void howdy() 
+	public void howdy()
 	{
 		System.out.println("howdy");
 	}

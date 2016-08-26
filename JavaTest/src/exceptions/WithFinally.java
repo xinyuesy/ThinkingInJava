@@ -1,8 +1,9 @@
 package exceptions;
 
-public class WithFinally 
+public class WithFinally
 {
 	static Switch sw = new Switch();
+
 	public static void main(String[] args)
 	{
 		try
@@ -10,10 +11,10 @@ public class WithFinally
 			sw.on();
 			OnOffSwitch.f();
 			throw new RuntimeException();
-		} catch(OnOffException1 e)
+		} catch (OnOffException1 e)
 		{
 			System.out.println("OnOffException1");
-		} catch(OnOffException2 e)
+		} catch (OnOffException2 e)
 		{
 			System.out.println("OnOffException2");
 		} finally

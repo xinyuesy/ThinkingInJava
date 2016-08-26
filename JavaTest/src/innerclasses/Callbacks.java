@@ -8,6 +8,7 @@ interface Incrementable
 class Callee1 implements Incrementable
 {
 	private int i = 0;
+
 	public void increment()
 	{
 		i++;
@@ -17,19 +18,28 @@ class Callee1 implements Incrementable
 
 class MyIncrement
 {
-	public void increment() { System.out.println("Other operation"); }
-	static void f(MyIncrement mi) { mi.increment(); }
+	public void increment()
+	{
+		System.out.println("Other operation");
+	}
+
+	static void f(MyIncrement mi)
+	{
+		mi.increment();
+	}
 }
 
 class Callee2 extends MyIncrement
 {
 	private int i = 0;
+
 	public void increment()
 	{
 		super.increment();
 		i++;
 		System.out.println(i);
 	}
+
 	private class Closure implements Incrementable
 	{
 		public void increment()
@@ -37,7 +47,7 @@ class Callee2 extends MyIncrement
 			Callee2.this.increment();
 		}
 	}
-	
+
 	Incrementable getCallbackReference()
 	{
 		return new Closure();
@@ -47,11 +57,19 @@ class Callee2 extends MyIncrement
 class Caller
 {
 	private Incrementable callbackReference;
-	Caller(Incrementable cbh) { callbackReference = cbh; }
-	void go() { callbackReference.increment(); }
+
+	Caller(Incrementable cbh)
+	{
+		callbackReference = cbh;
+	}
+
+	void go()
+	{
+		callbackReference.increment();
+	}
 }
 
-public class Callbacks 
+public class Callbacks
 {
 	public static void main(String[] args)
 	{

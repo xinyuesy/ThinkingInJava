@@ -3,6 +3,7 @@ package interfaces;
 import java.nio.CharBuffer;
 import java.util.Random;
 import java.util.Scanner;
+
 /*Readable接口中的read()方法实现了将字符串读入charBuffer中，但是只有在需要输出的时候才会调用。
 Scanner是文本扫描器类，利用Scanner扫描并输出charBuffer中的内容的顺序：以hasNext()方法为例：
 第一次调用hasNext()，由于此时charBuffer并无内容，等待输入，hasNext()方法阻塞，调用并执行read()方法，
@@ -13,20 +14,22 @@ Scanner是文本扫描器类，利用Scanner扫描并输出charBuffer中的内容的顺序：以hasNext(
 public class RandomWords implements Readable
 {
 	private static Random rand = new Random(47);
-	private static final char[] capitals = 
-			"ABCDEFGHIJKLMNOPQRSTUVWXYZ".toCharArray();
-	private static final char[] lowers =
-			"abcdefghijklmnopqrstuvwxyz".toCharArray();
-	private static final char[] vowels =
-			"aeiou".toCharArray();
+	private static final char[] capitals = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".toCharArray();
+	private static final char[] lowers = "abcdefghijklmnopqrstuvwxyz".toCharArray();
+	private static final char[] vowels = "aeiou".toCharArray();
 	private int count;
-	public RandomWords(int count) { this.count = count; }
+
+	public RandomWords(int count)
+	{
+		this.count = count;
+	}
+
 	public int read(CharBuffer cb)
 	{
-		if(count-- == 0)
+		if (count-- == 0)
 			return -1;
 		cb.append(capitals[rand.nextInt(capitals.length)]);
-		for(int i = 0; i < 4; i++)
+		for (int i = 0; i < 4; i++)
 		{
 			cb.append(vowels[rand.nextInt(vowels.length)]);
 			cb.append(lowers[rand.nextInt(lowers.length)]);
@@ -34,10 +37,11 @@ public class RandomWords implements Readable
 		cb.append(" ");
 		return 10;
 	}
+
 	public static void main(String[] args)
 	{
 		Scanner s = new Scanner(new RandomWords(10));
-		while(s.hasNext())
+		while (s.hasNext())
 			System.out.println(s.next());
 	}
 }

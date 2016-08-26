@@ -26,7 +26,6 @@ public  class AbstractClass
 	}
 }*/
 
-
 //output
 //The value is: 0
 //The value is: 10
@@ -39,16 +38,19 @@ abstract class AbstractTest
 class AbstractHerit extends AbstractTest
 {
 	private int value = 10;
+
 	public static void walking()
 	{
 		System.out.println("I'm walking");
 	}
+
 	void print()
 	{
 		System.out.println("The value is: " + value);
 	}
 }
-public  class AbstractClass 
+
+public class AbstractClass
 {
 	public static void main(String[] args)
 	{

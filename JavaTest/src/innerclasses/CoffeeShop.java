@@ -1,5 +1,6 @@
 package innerclasses;
 
-public interface CoffeeShop {
+public interface CoffeeShop
+{
 	void drinking();
 }

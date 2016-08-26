@@ -7,11 +7,13 @@ class Instrument
 	{
 		System.out.println("Play the instrument");
 	}
+
 	static void tune(Instrument i)
 	{
 		i.play();
 	}
 }
+
 public class Wind extends Instrument
 {
 	public static void main(String[] args)

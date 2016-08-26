@@ -5,13 +5,32 @@ package chapter07;
 class Cleanser
 {
 	private String s = "Cleanser";
-	public void append(String a) { s += a; }
-	public void dilute() { append(" dilute()"); }
-	public void apply() { append(" apply()"); }
-	public void scrub() { append(" scrub()"); }
-	public String toString() { return s; }
-	
-	
+
+	public void append(String a)
+	{
+		s += a;
+	}
+
+	public void dilute()
+	{
+		append(" dilute()");
+	}
+
+	public void apply()
+	{
+		append(" apply()");
+	}
+
+	public void scrub()
+	{
+		append(" scrub()");
+	}
+
+	public String toString()
+	{
+		return s;
+	}
+
 	public static void main(String[] args)
 	{
 		Cleanser x = new Cleanser();
@@ -20,17 +39,23 @@ class Cleanser
 		x.scrub();
 		System.out.println(x);
 	}
-	
+
 }
-public class Detergent extends Cleanser {
+
+public class Detergent extends Cleanser
+{
 	public void scrub()
 	{
 		append(" Detergent.scrub()");
-		//调用基类的方法
+		// 调用基类的方法
 		super.scrub();
 	}
-	
-	public void foam() { append(" foam()"); }
+
+	public void foam()
+	{
+		append(" foam()");
+	}
+
 	public static void main(String[] args)
 	{
 		Detergent x = new Detergent();
@@ -50,12 +75,12 @@ class NewClass extends Detergent
 	{
 		append(" NewClass scrub()");
 	}
-	
+
 	public void sterilize()
 	{
 		append(" sterilize()");
 	}
-	
+
 	public static void main(String[] args)
 	{
 		NewClass n = new NewClass();

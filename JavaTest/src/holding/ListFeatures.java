@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Random;
 import typeinfo.pets.*;
 
-public class ListFeatures 
+public class ListFeatures
 {
 	public static void main(String[] args)
 	{
@@ -28,17 +28,17 @@ public class ListFeatures
 		System.out.println("8: " + pets);
 		pets.add(3, new Mouse());
 		System.out.println("9: " + pets);
-		List<Pet> sub = pets.subList(1,4);
+		List<Pet> sub = pets.subList(1, 4);
 		System.out.println("sublist: " + sub);
 		System.out.println("10: " + pets.containsAll(sub));
 		Collections.sort(sub);
 		System.out.println("sorted subList: " + sub);
 		System.out.println("11: " + pets.containsAll(sub));
-		Collections.shuffle(sub,rand);
+		Collections.shuffle(sub, rand);
 		System.out.println("shuffled sublist: " + sub);
 		System.out.println("12: " + pets.containsAll(sub));
 		List<Pet> copy = new ArrayList<Pet>(pets);
-		sub = Arrays.asList(pets.get(1),pets.get(4));
+		sub = Arrays.asList(pets.get(1), pets.get(4));
 		System.out.println("sub: " + sub);
 		copy.retainAll(sub);
 		System.out.println("13: " + copy);
@@ -49,7 +49,7 @@ public class ListFeatures
 		System.out.println("15: " + copy);
 		copy.set(1, new Mouse());
 		System.out.println("16: " + copy);
-		copy.addAll(2,sub);
+		copy.addAll(2, sub);
 		System.out.println("17: " + copy);
 		System.out.println("18: " + pets.isEmpty());
 		pets.clear();
@@ -63,4 +63,3 @@ public class ListFeatures
 		System.out.println("23: " + pa[3].id());
 	}
 }
-

@@ -1,8 +1,11 @@
 package innerclasses;
+
 interface U
 {
 	void a();
+
 	void b();
+
 	void c();
 }
 
@@ -11,50 +14,71 @@ class A
 	U d()
 	{
 		return new U()
-				{
-					public void a(){ System.out.println("U.a()"); }
-					public void b(){ System.out.println("U.b()"); }
-					public void c(){ System.out.println("U.c()"); }
-					public String toString() { return "A.d()"; }
-					
-				};
+		{
+			public void a()
+			{
+				System.out.println("U.a()");
+			}
+
+			public void b()
+			{
+				System.out.println("U.b()");
+			}
+
+			public void c()
+			{
+				System.out.println("U.c()");
+			}
+
+			public String toString()
+			{
+				return "A.d()";
+			}
+
+		};
 	}
-	
+
 }
 
 class B
 {
 	private U[] uarray = new U[10];
 	private int i = 0;
+
 	void save(U u)
 	{
 		uarray[i++] = u;
 	}
+
 	void reset()
 	{
 		uarray = null;
 	}
+
 	void remove(int i)
 	{
-		if(i < uarray.length && i >= 0 && uarray[i-1] != null)
+		if (i < uarray.length && i >= 0 && uarray[i - 1] != null)
 		{
-			System.out.println("Remove " + i + uarray[i-1]);;
-			uarray[i-1] = null;
-			
+			System.out.println("Remove " + i + uarray[i - 1]);
+			;
+			uarray[i - 1] = null;
+
 		}
 	}
-	
+
 	U getValue(int i)
 	{
-		return uarray[i-1];
+		return uarray[i - 1];
 	}
+
 	void print()
 	{
-		for(int i = 0; i < uarray.length && uarray[i] != null; i++)
+		for (int i = 0; i < uarray.length && uarray[i] != null; i++)
 			System.out.println(i + " " + uarray[i]);
 	}
 }
-public class Test23 
+
+public class Test23
 {
 	public static void main(String[] args)
 	{
@@ -72,6 +96,6 @@ public class Test23
 		b.print();
 		b.getValue(3).a();
 		b.remove(3);
-		
+
 	}
 }

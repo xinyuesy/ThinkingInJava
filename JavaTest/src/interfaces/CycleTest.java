@@ -4,13 +4,18 @@ interface Cycle
 {
 	void riding();
 }
+
 interface CycleFactory
 {
 	Cycle getCycle();
 }
+
 class Unicycle implements Cycle
 {
-	public void riding() { System.out.println("Unicycle.riding()"); }
+	public void riding()
+	{
+		System.out.println("Unicycle.riding()");
+	}
 }
 
 class UnicycleFactory implements CycleFactory
@@ -20,9 +25,13 @@ class UnicycleFactory implements CycleFactory
 		return new Unicycle();
 	}
 }
+
 class Bicycle implements Cycle
 {
-	public void riding() { System.out.println("Bicycle.riding()"); }
+	public void riding()
+	{
+		System.out.println("Bicycle.riding()");
+	}
 }
 
 class BicycleFactory implements CycleFactory
@@ -35,7 +44,10 @@ class BicycleFactory implements CycleFactory
 
 class Tricycle implements Cycle
 {
-	public void riding() { System.out.println("Tricycle.riding()"); }
+	public void riding()
+	{
+		System.out.println("Tricycle.riding()");
+	}
 }
 
 class TricycleFactory implements CycleFactory
@@ -46,14 +58,14 @@ class TricycleFactory implements CycleFactory
 	}
 }
 
-
-public class CycleTest 
+public class CycleTest
 {
 	public static void ride(CycleFactory factory)
 	{
 		Cycle c = factory.getCycle();
 		c.riding();
 	}
+
 	public static void main(String[] args)
 	{
 		ride(new UnicycleFactory());

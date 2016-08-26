@@ -7,12 +7,11 @@ import typeinfo.pets.Pet;
 import typeinfo.pets.Pets;
 import typeinfo.pets.Rat;
 
-public class LinkedListFeatures 
+public class LinkedListFeatures
 {
 	public static void main(String[] args)
 	{
-		LinkedList<Pet> pets = 
-				new LinkedList<Pet>(Pets.arrayList(5));
+		LinkedList<Pet> pets = new LinkedList<Pet>(Pets.arrayList(5));
 		System.out.println(pets);
 		System.out.println("pets.getFirst(): " + pets.getFirst());
 		System.out.println("pets.element(): " + pets.element());
@@ -30,6 +29,6 @@ public class LinkedListFeatures
 		pets.addLast(new Hamster());
 		System.out.println("After addLast(): " + pets);
 		System.out.println("pets.removeLast(): " + pets.removeLast());
-		
+
 	}
 }

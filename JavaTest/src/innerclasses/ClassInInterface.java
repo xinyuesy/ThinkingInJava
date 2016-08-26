@@ -1,9 +1,11 @@
 package innerclasses;
 
-public interface ClassInInterface 
+public interface ClassInInterface
 {
 	void howdy();
+
 	static int a = 5;
+
 	class Test
 	{
 		static void print(ClassInInterface c)
@@ -11,11 +13,12 @@ public interface ClassInInterface
 			System.out.println(c.a);
 			howdy();
 		}
+
 		public static void howdy()
 		{
 			System.out.println("Howdy!");
 		}
-		
+
 		public static void main(String[] args)
 		{
 			new Test().howdy();

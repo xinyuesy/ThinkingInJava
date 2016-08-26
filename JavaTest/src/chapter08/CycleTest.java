@@ -1,17 +1,19 @@
 package chapter08;
+
 //动态绑定/后期绑定
-class Cycle {
+class Cycle
+{
 	public void ride(Cycle c)
 	{
 		System.out.println("Cycle.ride() " + c.wheels());
 	}
+
 	public int wheels()
 	{
 		return 0;
 	}
-	
-}
 
+}
 
 class Unicycle extends Cycle
 {
@@ -20,13 +22,13 @@ class Unicycle extends Cycle
 	{
 		System.out.println("Unicycle.ride() " + c.wheels());
 	}
+
 	@Override
 	public int wheels()
 	{
 		return 1;
 	}
-	
-	
+
 }
 
 class Bicycle extends Cycle
@@ -35,11 +37,13 @@ class Bicycle extends Cycle
 	{
 		System.out.println("Bicycle.ride() " + c.wheels());
 	}
+
 	@Override
 	public int wheels()
 	{
 		return 2;
 	}
+
 	void balance()
 	{
 		System.out.println("Bicycle.balance()");
@@ -52,22 +56,26 @@ class Tricycle extends Cycle
 	{
 		System.out.println("Tricycle.ride() " + c.wheels());
 	}
+
 	@Override
 	public int wheels()
 	{
 		return 3;
 	}
+
 	void balance()
 	{
 		System.out.println("Unicycle.balance()");
 	}
 }
+
 public class CycleTest
 {
 	public static void riding(Cycle c)
 	{
 		c.ride(c);
 	}
+
 	public static void main(String[] args)
 	{
 		Unicycle uc = new Unicycle();
@@ -76,9 +84,9 @@ public class CycleTest
 		riding(bc);
 		Tricycle tc = new Tricycle();
 		riding(tc);
-		
+
 		Cycle a = new Unicycle();
-		//((Bicycle) a).balance();
+		// ((Bicycle) a).balance();
 		a = new Bicycle();
 		((Bicycle) a).balance();
 		a = new Tricycle();

@@ -11,12 +11,13 @@ public class Sequence extends ArrayList
 	{
 		super(c);
 	}
+
 	public static void main(String[] args)
 	{
-		Sequence s = new Sequence(Arrays.asList(3,5,7,9));
+		Sequence s = new Sequence(Arrays.asList(3, 5, 7, 9));
 		Iterator it = s.iterator();
-		ArrayList a = new ArrayList(Arrays.asList(3,5,7,9));
-		while(it.hasNext())
+		ArrayList a = new ArrayList(Arrays.asList(3, 5, 7, 9));
+		while (it.hasNext())
 			System.out.println(it.next());
 	}
 }
